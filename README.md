@@ -13,19 +13,19 @@ web提示框，基于原生JavaScript，
 这边有两层，最底层的toptips:  
     `.toptips' `
     `{`
-        `position: fixed;    //绝对定位`
-        `-webkit-transform: translateZ(0);`
-        `transform: translateZ(0);`
-        `top: 20px;`
-        `left: 0;`
-        `right: 0;`
-        `text-align: center;`
-        `z-index: 9012;     //显示级别`
-        `width: 100%;`
-        `margin: 0 auto;`
-        `pointer-events: none;    //神器，不阻挡下面按钮点击`
+        `position: fixed;    //绝对定位`  
+        `-webkit-transform: translateZ(0);`  
+        `transform: translateZ(0);`  
+        `top: 20px;`  
+        `left: 0;`  
+        `right: 0;`  
+        `text-align: center;`  
+        `z-index: 9012;     //显示级别`  
+        `width: 100%;`  
+        `margin: 0 auto;`  
+        `pointer-events: none;    //神器，不阻挡下面按钮点击`  
     `}`  
-    
+
     同时里面的居中对于一个前端一窍不通的我感觉很有意思， text-align: center; margin: 0 auto;轻松搞定
 
     第二层就是文本框的样式，字体，背景，颜色等等了，可以自己配置，当然，在js封装中有其参数配置
@@ -34,7 +34,7 @@ web提示框，基于原生JavaScript，
     js是用原生JavaScript语言编写，本来写的是JQuery(因为在做的项目用的是JQuery)  
         
     首先  
-   `(function() {})(`        
+   `(function() {})(`    
     `);`  
     所有的事件都写在里面  
           
@@ -45,36 +45,36 @@ web提示框，基于原生JavaScript，
         `var tip = topTip.create(); //var tip = topTip.create(id);`  
         执行事件return this
 - 2、配置参数  
-    `tip.setData({`
-    `   //initID:"ID",`
-    `    tipText: "没有匹配的数据！",`
-    `    tipType: "error"`
+    `tip.setData({`  
+    `   //initID:"ID",`  
+    `    tipText: "没有匹配的数据！",`  
+    `    tipType: "error"`  
     `})`  
     当只与一个弹出框，则可省略ID,此事件最后return this
 - 3、显示弹出框  
         调用方法是  
-            `tip.showTopTip(); //tip.showTopTip(id);`  
+            `tip.showTopTip(); //tip.showTopTip(id);`    
         需要先配置参数setData,然后调用showTopTip();
 - 4、隐藏弹出框  
-        tip.hideToptip();
+        `tip.hideToptip();   //tip.hideToptip(id);`  
 - 5、显示弹出框,延时隐藏  
         这个事件内部的执行顺序很简单，先显示弹出框，然后setTimeOut执行隐藏，**由于setTimeOut是异步，所以请考虑你的代码**  
         **执行事件时都要先进行setData配置参数，然后再显示**
 
 # options  
 
-`var options = {`
-    `font_Color: '#707070',`
-    `font_Size: '14px',`
-    `font_family: '宋体',`
-    `top: '20px',`
-    `background_color: '#e4e4e4',`
-    `isShow: false,  //初始时是否弹出显示`
-    `initID: "showTopTip",   //当用户没有提供生成的div id时，默认的ID名`
-    `tipText: '',  //提示框文字`
-    `tipType: '',  //提示框类型或图片url`
-    `delayTime: 2000   //延时时间`
-`}`
+`var options = {`  
+    `font_Color: '#707070',`  
+    `font_Size: '14px',`  
+    `font_family: '宋体',`  
+    `top: '20px',`  
+    `background_color: '#e4e4e4',`  
+    `isShow: false,  //初始时是否弹出显示`  
+    `initID: "showTopTip",   //当用户没有提供生成的div id时，默认的ID名`  
+    `tipText: '',  //提示框文字`  
+    `tipType: '',  //提示框类型或图片url`  
+    `delayTime: 2000   //延时时间`  
+`}`  
 
 
 **tipType支持四种类型，ok error warn loading 或者可填写自己的图片url亦可。**
