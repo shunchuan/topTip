@@ -1,0 +1,46 @@
+﻿/**
+*create by csc 
+*date 20170809
+*弹出提示框样式
+*/
+.toptips
+{
+	position: fixed;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	top: 20px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 9012;
+	width: 100%;
+	margin: 0 auto;
+	pointer-events: none;
+}
+.mainTopTip
+{
+	margin: 0 auto;
+	display: table;
+	padding: 5px 20px 5px 20px;
+	top: 0;
+	font-size: 14px;
+	font-family: 宋体;
+	height: 25px;
+	line-height: 25px;
+	font-weight: bolder;
+	background-color: #e4e4e4;
+	color: #707070;
+}
+
+.mainTopTip img
+{
+	height: 25px; 
+	width: 25px; 
+	float: left;
+}
+
+.mainTopTip .mainTopTip_text
+{
+	float: left; 
+	margin-left: 5px;
+}
